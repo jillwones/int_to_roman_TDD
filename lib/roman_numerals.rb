@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Integer
   ROMAN_NUMERALS = {
     1000 => 'M',
@@ -12,18 +14,17 @@ class Integer
     9 => 'IX',
     5 => 'V',
     4 => 'IV',
-    1 => 'I' 
-  }
+    1 => 'I'
+  }.freeze
   def to_roman_numeral
     int_num = self
-    roman_numeral = ""    
+    roman_numeral = ''
     ROMAN_NUMERALS.each do |integer, roman|
-      (int_num/integer).times do 
-        roman_numeral << roman 
-        int_num -= integer 
-      end 
-    end 
+      (int_num / integer).times do
+        roman_numeral << roman
+        int_num -= integer
+      end
+    end
     roman_numeral
   end
-
 end
