@@ -12,4 +12,8 @@ describe 'to_roman_numeral' do
   it "should be able to convert 10 to X" do 
     expect(10.to_roman_numeral).to eq('X')
   end
+
+  it "should be able to convert 35 to XXXV" do 
+    expect(35.to_roman_numeral).to eq('XXXV')
+  end
 end
